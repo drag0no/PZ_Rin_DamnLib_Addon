@@ -1,0 +1,6 @@
+require=damnlib
+id=Rin_DamnLib_Addon
+name=Rin DamnLib Addon
+icon=poster.png
+authors=Rinski
+description=Fixes multiple mod integration issues for B41.78+.

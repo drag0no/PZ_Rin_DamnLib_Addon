@@ -1,0 +1,6 @@
+version=1
+id=
+title=DamnLib Addon
+description=Fixes mod integration issues for B41.78+.
+tags=Build 41;Balance;Multiplayer;Vehicles;Items
+visibility=public
