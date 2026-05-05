@@ -1,5 +1,3 @@
--- Список ID предметов, у которых нужно показывать состояние
--- Добавляй сюда ID из модов, например: "Base.WheelStandard", "ModID.CustomWheel"
 local wheelList = {
     "Base.V100Tire2",
     "Base.M923Axle2",
@@ -17,7 +15,6 @@ local wheelList = {
 local function onFillInventoryObjectContextMenu(player, context, items)
     local item = nil
     
-    -- Получаем сам предмет (PZ передает таблицу, берем первый элемент)
     for _, v in ipairs(items) do
         if not instanceof(v, "InventoryItem") then
             item = v.items[1]
@@ -29,7 +26,6 @@ local function onFillInventoryObjectContextMenu(player, context, items)
 
     if not item then return end
 
-    -- Проверяем, есть ли ID предмета в нашем списке
     local isTargetWheel = false
     for _, wheelID in ipairs(wheelList) do
         if item:getFullType() == wheelID then
@@ -38,19 +34,16 @@ local function onFillInventoryObjectContextMenu(player, context, items)
         end
     end
 
-    -- Если нашли совпадение, добавляем строку состояния в меню
+
     if isTargetWheel then
         local condition = item:getCondition()
         local maxCondition = item:getConditionMax()
         
-        -- Если у модового предмета ConditionMax по нулям, принудительно считаем от 100
         if maxCondition <= 0 then maxCondition = 100 end
 
-        -- Добавляем серую неактивную строку в начало или конец меню
         local option = context:addOption("Condition: " .. condition .. " / " .. maxCondition)
-        option.notAvailable = true -- Делает пункт серым (кликнуть нельзя)
+        option.notAvailable = true
     end
 end
 
--- Событие создания меню инвентаря (ПКМ по предмету)
 Events.OnFillInventoryObjectContextMenu.Add(onFillInventoryObjectContextMenu)
