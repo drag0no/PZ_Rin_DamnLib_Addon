@@ -1,5 +1,5 @@
 version=1
-id=
+id=3722654862
 title=that DAMN Library Addon
 description=[b]Built for version B41.78+![/b]
 description=
