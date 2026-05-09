@@ -1,0 +1,48 @@
+module Base
+{
+
+	recipe Repair Tire
+    {
+		V100Tire2/V101Tire2/V103Tire2/BushmasterTire,
+		TireRepairTools,
+		TireRepairRubberSolution,
+		TireRepairStrips,
+
+		NoBrokenItems:false,
+		Result:TireRepairTools,
+		Time:250.0,
+		OnCreate:DAMN.OnCreate.RepairTire,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+    }
+
+	recipe Repair Tire
+    {
+		V100Tires2/M923Axle2,
+		TireRepairTools,
+		TireRepairRubberSolution=2,
+		TireRepairStrips=2,
+
+		NoBrokenItems:false,
+		Result:TireRepairTools,
+		Time:500.0,
+		OnCreate:DAMN.OnCreate.RepairTire,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+    }
+
+	recipe Repair Tire
+    {
+		V100Axle2/V103Axle2,
+		TireRepairTools,
+		TireRepairRubberSolution=4,
+		TireRepairStrips=4,
+
+		NoBrokenItems:false,
+		Result:TireRepairTools,
+		Time:1000.0,
+		OnCreate:DAMN.OnCreate.RepairTire,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+    }
+}

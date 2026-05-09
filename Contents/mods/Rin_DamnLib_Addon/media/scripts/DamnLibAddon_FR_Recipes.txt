@@ -1,0 +1,122 @@
+module Base
+{
+	recipe Repair Tire
+    {
+		OldOffroadTire/NormalOffroadTire/PerformanceOffroadTire,
+		TireRepairTools,
+		TireRepairRubberSolution=2,
+		TireRepairStrips=2,
+
+		NoBrokenItems:false,
+		Result:TireRepairTools,
+		Time:500.0,
+		OnCreate:DAMN.OnCreate.RepairTire,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+    }
+
+	recipe Repair Tire
+    {
+		MakeshiftHmmwv_mil/OffroadTireHmmwv_mil/RoadTireHmmwv_mil,
+		TireRepairTools,
+		TireRepairRubberSolution=2,
+		TireRepairStrips=2,
+
+		NoBrokenItems:false,
+		Result:TireRepairTools,
+		Time:500.0,
+		OnCreate:DAMN.OnCreate.RepairTire,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+    }
+
+	recipe Repair Tire
+    {
+		OldHeavyDutyTire/NormalHeavyDutyTire/ModernHeavyDutyTire,
+		TireRepairTools,
+		TireRepairRubberSolution=2,
+		TireRepairStrips=2,
+
+		NoBrokenItems:false,
+		Result:TireRepairTools,
+		Time:500.0,
+		OnCreate:DAMN.OnCreate.RepairTire,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+    }
+
+	recipe Repair Tire
+    {
+		MakeshiftTireDeuce_mil/OffroadTireDeuce_mil/RoadTireDeuce_mil,
+		TireRepairTools,
+		TireRepairRubberSolution=2,
+		TireRepairStrips=2,
+
+		NoBrokenItems:false,
+		Result:TireRepairTools,
+		Time:500.0,
+		OnCreate:DAMN.OnCreate.RepairTire,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+    }
+
+	recipe Repair Tire
+    {
+		MakeshiftTireMutt_mil/OffroadTireMutt_mil/RoadTireMutt_mil,
+		TireRepairTools,
+		TireRepairRubberSolution=2,
+		TireRepairStrips=2,
+
+		NoBrokenItems:false,
+		Result:TireRepairTools,
+		Time:500.0,
+		OnCreate:DAMN.OnCreate.RepairTire,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+    }
+
+	fixing Repair Offroad Tires
+    {
+		Require:OldOffroadTire;NormalOffroadTire;PerformanceOffroadTire,
+		Fixer:FixAFlat=1,
+		Fixer:Glue=4,
+		Fixer:Woodglue=4,
+		Fixer:DuctTape=4,
+    }
+
+	fixing Repair HMMWV Tires
+    {
+		Require:MakeshiftHmmwv_mil;OffroadTireHmmwv_mil;RoadTireHmmwv_mil,
+		Fixer:FixAFlat=1,
+		Fixer:Glue=4,
+		Fixer:Woodglue=4,
+		Fixer:DuctTape=4,
+    }
+
+	fixing Repair Commercial Tires
+    {
+		Require:OldHeavyDutyTire;NormalHeavyDutyTire;ModernHeavyDutyTire,
+		Fixer:FixAFlat=1,
+		Fixer:Glue=4,
+		Fixer:Woodglue=4,
+		Fixer:DuctTape=4,
+    }
+
+	fixing Repair Heavy Military Tires
+    {
+		Require:MakeshiftTireDeuce_mil;OffroadTireDeuce_mil;RoadTireDeuce_mil,
+		Fixer:FixAFlat=1,
+		Fixer:Glue=4,
+		Fixer:Woodglue=4,
+		Fixer:DuctTape=4,
+    }
+
+	fixing Repair Light Military Tires
+    {
+		Require:MakeshiftTireMutt_mil;OffroadTireMutt_mil;RoadTireMutt_mil,
+		Fixer:FixAFlat=1,
+		Fixer:Glue=4,
+		Fixer:Woodglue=4,
+		Fixer:DuctTape=4,
+    }
+}

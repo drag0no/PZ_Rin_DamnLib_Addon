@@ -1,6 +1,10 @@
 version=1
 id=
-title=DamnLib Addon
-description=Fixes mod integration issues for B41.78+.
+title=that DAMN Library Addon
+description=[b]Built for version B41.78+![/b]
+description=
+description=[b]MAKE SURE TO PUT THIS ADDON TO LOAD AFTER ALL CAR MODS THAT YOU HAVE![/b]
+description=
+description=This mod adds recipes to repair tires for some outdated KI5 Cars and Filibuster Rhymes' Used Cars.
 tags=Build 41;Balance;Multiplayer;Vehicles;Items
 visibility=public
