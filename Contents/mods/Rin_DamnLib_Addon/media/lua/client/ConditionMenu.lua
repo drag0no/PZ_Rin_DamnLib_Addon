@@ -22,6 +22,15 @@ local wheelList = {
 	"Base.MakeshiftTireMutt_mil",
 	"Base.OffroadTireMutt_mil",
 	"Base.RoadTireMutt_mil",
+	"Base.NormalTire1",
+	"Base.NormalTire2",
+	"Base.NormalTire3",
+	"Base.ModernTire1",
+	"Base.ModernTire2",
+	"Base.ModernTire3",
+	"Base.OldTire1",
+	"Base.OldTire2",
+	"Base.OldTire3",
 }
 
 local function onFillInventoryObjectContextMenu(player, context, items)
