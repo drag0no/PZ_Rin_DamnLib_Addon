@@ -1,0 +1,35 @@
+module Base
+{
+
+	recipe Repair Tire
+    {
+		Base.NormalTire1/Base.ModernTire1/Base.OldTire1/Base.NormalTire3/Base.ModernTire3/Base.OldTire3,
+		TireRepairTools,
+		TireRepairRubberSolution,
+		TireRepairStrips,
+
+		NoBrokenItems:false,
+		Result:TireRepairTools,
+		Time:250.0,
+		OnCreate:DAMN.OnCreate.RepairTire,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+    }
+
+	recipe Repair Tire
+    {
+		Base.NormalTire2/Base.ModernTire2/Base.OldTire2,
+		TireRepairTools,
+		TireRepairRubberSolution=2,
+		TireRepairStrips=2,
+
+		NoBrokenItems:false,
+		Result:TireRepairTools,
+		Time:500.0,
+		OnCreate:DAMN.OnCreate.RepairTire,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+    }
+
+	recipe Repair Tire
+}
