@@ -30,6 +30,4 @@ module Base
 		NeedToBeLearn:false,
 		CanBeDoneFromFloor:true,
     }
-
-	recipe Repair Tire
 }
